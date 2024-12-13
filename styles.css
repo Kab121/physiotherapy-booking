@@ -4,23 +4,65 @@ body {
     background-color: #f8f9fa;
 }
 
+/* Header Styles */
 header {
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: #4CAF50; /* Updated for a better aesthetic */
+    justify-content: space-between; /* Adjust spacing for better alignment */
+    background-color: #4CAF50; /* A clean green aesthetic */
     color: white;
-    padding: 20px;
+    padding: 10px 20px;
+    flex-wrap: wrap; /* Allows items to wrap on small screens */
 }
 
 header .logo {
-    width: 200px; /* Increased logo size for better visibility */
-    margin-right: 15px;
+    width: 100px; /* Optimized logo size for smaller screens */
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 10px;
 }
 
 h1 {
-    font-size: 2.5rem; /* Increased header font size */
+    font-size: 1.2rem; /* Slightly larger for better readability */
+    text-align: center;
+    flex: 1; /* Center-align text within the header */
 }
+
+
+/* Adjust for mobile devices */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack logo and text vertically */
+        align-items: center;
+    }
+
+    header .logo {
+        width: 80px; /* Smaller logo size for narrow screens */
+        margin: 0 0 10px 0; /* Margin below the logo */
+    }
+
+    h1 {
+        font-size: 1rem; /* Adjust font size for small screens */
+        text-align: center;
+    }
+}
+
+/* Extra small devices (e.g., below 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    header .logo {
+        width: 60px; /* Further reduce logo size */
+    }
+
+    h1 {
+        font-size: 0.9rem; /* Adjust font size for extra small devices */
+    }
+}
+
+
+
 
 .container {
     max-width: 800px;
